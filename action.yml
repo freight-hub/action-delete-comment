@@ -1,11 +1,23 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'action-delete-comment'
+description: 'Action that allows to delete comment'
+author: 'rodmatos'
 inputs:
-  milliseconds: # change this
+  github_token:
+    description: A GitHub token.
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  body:
+    description: The comment body.
+    required: true
+  repo:
+    description: The owner and repository name. e.g.) Codertocat/Hello-World
+    required: false
+    default: ${{ github.repository }}
+  number:
+    description: The number of the issue or pull request.
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
+branding:
+  icon: message-circle
+  color: gray-dark

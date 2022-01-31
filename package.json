@@ -1,11 +1,11 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "action-delete-comment",
+  "version": "0.0.1",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "GitHub Action to delete comments",
   "main": "lib/main.js",
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
@@ -25,7 +25,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0"
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^4.0.0",
+    "@octokit/rest": "^18.0.9"
   },
   "devDependencies": {
     "@types/node": "^16.10.5",
