@@ -14,7 +14,7 @@ jobs:
       - run: |
           npm install
       - run: |
-          npm run all
+          npm run build
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
@@ -22,3 +22,5 @@ jobs:
       - uses: ./
         with:
           milliseconds: 1000
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          body: "not_really_a_body"
