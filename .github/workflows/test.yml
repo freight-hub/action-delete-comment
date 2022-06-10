@@ -25,3 +25,4 @@ jobs:
         with:
           milliseconds: 1000
           github_token: "not_really_a_valid_token"
+          body: "not_really_a_body"
